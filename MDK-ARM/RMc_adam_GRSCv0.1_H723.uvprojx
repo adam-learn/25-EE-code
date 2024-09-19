@@ -1174,11 +1174,6 @@
               <FileType>1</FileType>
               <FilePath>..\Applications\Hardware\CAN_receive_send.c</FilePath>
             </File>
-            <File>
-              <FileName>UART_data_transmit.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Applications\Hardware\UART_data_transmit.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

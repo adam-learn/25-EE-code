@@ -69,24 +69,24 @@ extern TIM_HandleTypeDef htim13;
 extern TIM_HandleTypeDef htim14;
 extern TIM_HandleTypeDef htim16;
 extern TIM_HandleTypeDef htim17;
-extern DMA_HandleTypeDef hdma_uart5_rx;
-extern DMA_HandleTypeDef hdma_uart5_tx;
-extern DMA_HandleTypeDef hdma_uart7_rx;
-extern DMA_HandleTypeDef hdma_uart7_tx;
-extern DMA_HandleTypeDef hdma_usart1_rx;
-extern DMA_HandleTypeDef hdma_usart1_tx;
+//extern DMA_HandleTypeDef hdma_uart5_rx;
+//extern DMA_HandleTypeDef hdma_uart5_tx;
+//extern DMA_HandleTypeDef hdma_uart7_rx;
+//extern DMA_HandleTypeDef hdma_uart7_tx;
+//extern DMA_HandleTypeDef hdma_usart1_rx;
+//extern DMA_HandleTypeDef hdma_usart1_tx;
 extern DMA_HandleTypeDef hdma_usart2_rx;
 extern DMA_HandleTypeDef hdma_usart2_tx;
 extern DMA_HandleTypeDef hdma_usart3_rx;
 extern DMA_HandleTypeDef hdma_usart3_tx;
-extern DMA_HandleTypeDef hdma_usart10_rx;
-extern DMA_HandleTypeDef hdma_usart10_tx;
-extern UART_HandleTypeDef huart5;
-extern UART_HandleTypeDef huart7;
-extern UART_HandleTypeDef huart1;
+//extern DMA_HandleTypeDef hdma_usart10_rx;
+//extern DMA_HandleTypeDef hdma_usart10_tx;
+//extern UART_HandleTypeDef huart5;
+//extern UART_HandleTypeDef huart7;
+//extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 extern UART_HandleTypeDef huart3;
-extern UART_HandleTypeDef huart10;
+//extern UART_HandleTypeDef huart10;
 extern TIM_HandleTypeDef htim23;
 
 /* USER CODE BEGIN EV */
@@ -227,7 +227,7 @@ void DMA1_Stream2_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Stream2_IRQn 0 */
 
   /* USER CODE END DMA1_Stream2_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_usart1_rx);
+  //HAL_DMA_IRQHandler(&hdma_usart1_rx);
   /* USER CODE BEGIN DMA1_Stream2_IRQn 1 */
 
   /* USER CODE END DMA1_Stream2_IRQn 1 */
@@ -241,7 +241,7 @@ void DMA1_Stream3_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Stream3_IRQn 0 */
 
   /* USER CODE END DMA1_Stream3_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_usart1_tx);
+  //HAL_DMA_IRQHandler(&hdma_usart1_tx);
   /* USER CODE BEGIN DMA1_Stream3_IRQn 1 */
 
   /* USER CODE END DMA1_Stream3_IRQn 1 */
@@ -255,7 +255,7 @@ void DMA1_Stream4_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Stream4_IRQn 0 */
 
   /* USER CODE END DMA1_Stream4_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_uart7_rx);
+ // HAL_DMA_IRQHandler(&hdma_uart7_rx);
   /* USER CODE BEGIN DMA1_Stream4_IRQn 1 */
 
   /* USER CODE END DMA1_Stream4_IRQn 1 */
@@ -269,7 +269,7 @@ void DMA1_Stream5_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Stream5_IRQn 0 */
 
   /* USER CODE END DMA1_Stream5_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_uart7_tx);
+  //HAL_DMA_IRQHandler(&hdma_uart7_tx);
   /* USER CODE BEGIN DMA1_Stream5_IRQn 1 */
 
   /* USER CODE END DMA1_Stream5_IRQn 1 */
@@ -283,7 +283,7 @@ void DMA1_Stream6_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Stream6_IRQn 0 */
 
   /* USER CODE END DMA1_Stream6_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_usart10_rx);
+ // HAL_DMA_IRQHandler(&hdma_usart10_rx);
   /* USER CODE BEGIN DMA1_Stream6_IRQn 1 */
 
   /* USER CODE END DMA1_Stream6_IRQn 1 */
@@ -367,9 +367,9 @@ void USART1_IRQHandler(void)
   /* USER CODE BEGIN USART1_IRQn 0 */
 
   /* USER CODE END USART1_IRQn 0 */
-  HAL_UART_IRQHandler(&huart1);
+//  HAL_UART_IRQHandler(&huart1);
   /* USER CODE BEGIN USART1_IRQn 1 */
-  UART_rx_IRQHandler(&UART1_data);//来源于sethome
+ // UART_rx_IRQHandler(&UART1_data);//来源于sethome
   /* USER CODE END USART1_IRQn 1 */
 }
 
@@ -437,7 +437,7 @@ void DMA1_Stream7_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Stream7_IRQn 0 */
 
   /* USER CODE END DMA1_Stream7_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_usart10_tx);
+ // HAL_DMA_IRQHandler(&hdma_usart10_tx);
   /* USER CODE BEGIN DMA1_Stream7_IRQn 1 */
 
   /* USER CODE END DMA1_Stream7_IRQn 1 */
@@ -451,9 +451,9 @@ void UART5_IRQHandler(void)
   /* USER CODE BEGIN UART5_IRQn 0 */
 
   /* USER CODE END UART5_IRQn 0 */
-  HAL_UART_IRQHandler(&huart5);
-  /* USER CODE BEGIN UART5_IRQn 1 */
-	UART_rx_IRQHandler(&UART5_data);//来源于sethome
+//  HAL_UART_IRQHandler(&huart5);
+//  /* USER CODE BEGIN UART5_IRQn 1 */
+//	UART_rx_IRQHandler(&UART5_data);//来源于sethome
 //	HAL_UARTEx_ReceiveToIdle_DMA(&huart5, rx_buff, RC_FRAME_LENGTH*2);//参考于DM例程	
   /* USER CODE END UART5_IRQn 1 */
 }
@@ -494,7 +494,7 @@ void DMA2_Stream0_IRQHandler(void)
   /* USER CODE BEGIN DMA2_Stream0_IRQn 0 */
 
   /* USER CODE END DMA2_Stream0_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_uart5_rx);
+ // HAL_DMA_IRQHandler(&hdma_uart5_rx);
   /* USER CODE BEGIN DMA2_Stream0_IRQn 1 */
 
   /* USER CODE END DMA2_Stream0_IRQn 1 */
@@ -508,7 +508,7 @@ void DMA2_Stream1_IRQHandler(void)
   /* USER CODE BEGIN DMA2_Stream1_IRQn 0 */
 
   /* USER CODE END DMA2_Stream1_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_uart5_tx);
+ // HAL_DMA_IRQHandler(&hdma_uart5_tx);
   /* USER CODE BEGIN DMA2_Stream1_IRQn 1 */
 
   /* USER CODE END DMA2_Stream1_IRQn 1 */
@@ -592,9 +592,9 @@ void UART7_IRQHandler(void)
   /* USER CODE BEGIN UART7_IRQn 0 */
 
   /* USER CODE END UART7_IRQn 0 */
-  HAL_UART_IRQHandler(&huart7);
-  /* USER CODE BEGIN UART7_IRQn 1 */
-  UART_rx_IRQHandler(&UART7_data);//来源于sethome
+//  HAL_UART_IRQHandler(&huart7);
+//  /* USER CODE BEGIN UART7_IRQn 1 */
+//  UART_rx_IRQHandler(&UART7_data);//来源于sethome
   /* USER CODE END UART7_IRQn 1 */
 }
 
@@ -634,9 +634,9 @@ void USART10_IRQHandler(void)
   /* USER CODE BEGIN USART10_IRQn 0 */
 
   /* USER CODE END USART10_IRQn 0 */
-  HAL_UART_IRQHandler(&huart10);
-  /* USER CODE BEGIN USART10_IRQn 1 */
-  UART_rx_IRQHandler(&UART10_data);//来源于sethome
+//  HAL_UART_IRQHandler(&huart10);
+//  /* USER CODE BEGIN USART10_IRQn 1 */
+//  UART_rx_IRQHandler(&UART10_data);//来源于sethome
   /* USER CODE END USART10_IRQn 1 */
 }
 
